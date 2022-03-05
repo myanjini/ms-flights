@@ -1,4 +1,4 @@
-version: "3.4"
+version: '3.4'
 
 services:
   ms-nodebootstrap-example:
@@ -27,6 +27,7 @@ services:
     # @see: https://docs.docker.com/compose/startup-order/
     # command: ["./shell/wait-for.sh", "ms-nodebootstrap-example-db:3306", "--", "./shell/start-dev.sh"]
     command: ./shell/wait-for.sh ms-nodebootstrap-example-db:3306 -- ./shell/start-dev.sh
+    #command: tail -f /dev/null
 
   ms-nodebootstrap-example-db:
     container_name: ms-nodebootstrap-example-db
